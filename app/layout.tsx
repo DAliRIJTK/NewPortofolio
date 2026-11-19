@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title:
-    "Dwika Ali Ramdhan Ibrahim — Full-Stack, Mobile & Computer Vision Engineer",
+  title: "Dwika Ali Ramdhan Ibrahim — Web & Mobile Developer",
   description:
-    "Portfolio of Dwika Ali Ramdhan Ibrahim (Politeknik Negeri Bandung JTK) — Enterprise Microservices (ElearningBSP), Dual-Database Financial Systems (Investasi PT Antam), Automated Geological CV (AnalisisGeoApps), and Native Android AI Apps (SnapCash).",
+    "Portfolio of Dwika Ali Ramdhan Ibrahim, a Politeknik Negeri Bandung D3 Informatics Engineering graduate who builds web and Android mobile applications.",
 };
 
 export default function RootLayout({
@@ -14,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark h-full scroll-smooth antialiased">
+    <html lang="en" className="h-full scroll-smooth antialiased">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -22,13 +21,12 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Nunito:wght@400;600;700&family=Playfair+Display:wght@700&family=Raleway:wght@500&family=Roboto:wght@500&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-full bg-[#08090B] text-[#ECEAE4] selection:bg-[#D4B483]/25 selection:text-[#ECEAE4] overflow-x-hidden">
+      <body className="min-h-full bg-page text-ink selection:bg-brand/40 overflow-x-hidden">
         {children}
       </body>
     </html>

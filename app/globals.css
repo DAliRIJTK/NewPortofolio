@@ -1,115 +1,57 @@
 @import "tailwindcss";
 
+/* GitHub-Dark × Emerald Tech token system */
 :root {
-  --bg-canvas: #08090b;
-  --bg-surface: #101216;
-  --bg-elevated: #161920;
-  --border-subtle: rgba(236, 234, 228, 0.08);
-  --border-strong: rgba(236, 234, 228, 0.16);
-  --text-primary: #eceae4;
-  --text-secondary: #9498a1;
-  --text-muted: #5e626b;
-  --accent-brass: #d4b483;
-  --accent-brass-soft: rgba(212, 180, 131, 0.14);
-  --signal-emerald: #34d399;
-
-  --font-display-stack: "Instrument Serif", "Playfair Display", "Times New Roman",
-    Georgia, serif;
-  --font-sans-stack: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, sans-serif;
-  --font-mono-stack: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
-    Consolas, monospace;
+  --bg-page: #0d1117;
+  --bg-surface: #161b22;
+  --bg-surface-alt: #1c232d;
+  --border-line: #30363d;
+  --brand-emerald: #10b981;
+  --brand-neon: #34d399;
+  --font-high: #e6edf3;
+  --font-medium: #8b949e;
 }
 
-@theme inline {
-  --font-display: var(--font-display-stack);
-  --font-sans: var(--font-sans-stack);
-  --font-mono: var(--font-mono-stack);
+@theme {
+  --color-page: #0d1117;
+  --color-surface: #161b22;
+  --color-surface-alt: #1c232d;
+  --color-line: #30363d;
+  --color-brand: #10b981;
+  --color-brand-neon: #34d399;
+  --color-ink: #e6edf3;
+  --color-muted: #8b949e;
+
+  --font-sans: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-nav: "Raleway", sans-serif;
+  --font-logo: "Comfortaa", sans-serif;
+  --font-button: "Roboto", sans-serif;
+
+  --shadow-card: 0px 12px 36px rgba(0, 0, 0, 0.45);
 }
 
 * {
   box-sizing: border-box;
 }
 
-html {
-  background-color: var(--bg-canvas);
-  color: var(--text-primary);
-  font-family: var(--font-sans-stack);
-}
-
-/* Subtle tactile surface grain */
-.bg-noise {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.032'/%3E%3C/svg%3E");
-}
-
-/* Architectural grid backdrop */
-.bg-architectural-grid {
-  background-size: 64px 64px;
+html,
+body {
+  background-color: #0d1117;
   background-image:
-    linear-gradient(to right, rgba(236, 234, 228, 0.028) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(236, 234, 228, 0.028) 1px, transparent 1px);
+    radial-gradient(ellipse 80% 50% at 15% 0%, rgba(16, 185, 129, 0.12), transparent 65%),
+    radial-gradient(ellipse 60% 45% at 85% 35%, rgba(52, 211, 153, 0.08), transparent 65%),
+    radial-gradient(ellipse 70% 50% at 50% 100%, rgba(16, 185, 129, 0.09), transparent 70%);
+  background-attachment: fixed;
+  color: #e6edf3;
+  font-family: var(--font-sans);
+  scroll-padding-top: 4rem;
+  color-scheme: dark;
 }
 
-/* Cursor-reactive spotlight surface */
-.interactive-surface {
-  position: relative;
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  transition:
-    border-color 280ms cubic-bezier(0.16, 1, 0.3, 1),
-    transform 280ms cubic-bezier(0.16, 1, 0.3, 1),
-    background-color 280ms cubic-bezier(0.16, 1, 0.3, 1);
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
-
-.interactive-surface::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 320ms cubic-bezier(0.16, 1, 0.3, 1);
-  background: radial-gradient(
-    520px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(212, 180, 131, 0.085),
-    transparent 45%
-  );
-}
-
-.interactive-surface:hover::before {
-  opacity: 1;
-}
-
-.interactive-surface:hover {
-  border-color: var(--border-strong);
-}
-
-/* Custom subtle scrollbars */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: #08090b;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #222630;
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #353b49;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+.no-scrollbar {
+  scrollbar-width: none;
 }
