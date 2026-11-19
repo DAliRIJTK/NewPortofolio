@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0B1310"/>
+      <stop offset="50%" stop-color="#0F221C"/>
+      <stop offset="100%" stop-color="#131920"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="400" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#162822"/>
+      <stop offset="100%" stop-color="#111A1D"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#34D399" stroke-width="0.6" stroke-opacity="0.07"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+  <rect width="800" height="450" fill="url(#grid)"/>
+  <circle cx="700" cy="70" r="180" fill="#10B981" fill-opacity="0.08"/>
+  <circle cx="100" cy="390" r="160" fill="#34D399" fill-opacity="0.06"/>
+
+  <!-- Outer Browser / App Frame -->
+  <rect x="28" y="24" width="744" height="402" rx="16" fill="#0D1513" stroke="#1E3A31" stroke-width="1.5"/>
+  <!-- Top Window Bar -->
+  <path d="M28 40C28 31.1634 35.1634 24 44 24H756C764.837 24 772 31.1634 772 40V64H28V40Z" fill="#12211C"/>
+  <line x1="28" y1="64" x2="772" y2="64" stroke="#1E3A31" stroke-width="1.5"/>
+  <circle cx="50" cy="44" r="5.5" fill="#EF4444" fill-opacity="0.8"/>
+  <circle cx="68" cy="44" r="5.5" fill="#F59E0B" fill-opacity="0.8"/>
+  <circle cx="86" cy="44" r="5.5" fill="#10B981" fill-opacity="0.8"/>
+
+  <!-- URL / Header Pill -->
+  <rect x="114" y="33" width="440" height="22" rx="6" fill="#0A1210" stroke="#1E3A31" stroke-width="1"/>
+  <text x="128" y="48" fill="#8B949E" font-family="monospace" font-size="11">https://elearning-bpsdm.jabarprov.go.id/dashboard</text>
+
+  <!-- Project Badge -->
+  <rect x="576" y="33" width="176" height="22" rx="11" fill="#064E3B" stroke="#10B981" stroke-width="1"/>
+  <text x="664" y="48" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-weight="700" font-size="10.5">5 GOV PORTALS · LMS</text>
+
+  
+    <!-- Sidebar -->
+    <rect x="44" y="80" width="150" height="330" rx="10" fill="#111D19" stroke="#1E3A31"/>
+    <text x="60" y="106" fill="#34D399" font-family="sans-serif" font-weight="700" font-size="12">BPSDM JABAR LMS</text>
+    <rect x="56" y="122" width="126" height="28" rx="6" fill="#064E3B"/>
+    <text x="68" y="140" fill="#ECFDF5" font-family="sans-serif" font-weight="600" font-size="11">1. Portal Pelatihan</text>
+    <rect x="56" y="158" width="126" height="26" rx="6" fill="#152620"/>
+    <text x="68" y="175" fill="#9CA3AF" font-family="sans-serif" font-size="11">2. Portal Mentoring</text>
+    <rect x="56" y="192" width="126" height="26" rx="6" fill="#152620"/>
+    <text x="68" y="209" fill="#9CA3AF" font-family="sans-serif" font-size="11">3. Ujian &amp; Kuis ASN</text>
+    <rect x="56" y="226" width="126" height="26" rx="6" fill="#152620"/>
+    <text x="68" y="243" fill="#9CA3AF" font-family="sans-serif" font-size="11">4. Modul &amp; Materi</text>
+    <rect x="56" y="260" width="126" height="26" rx="6" fill="#152620"/>
+    <text x="68" y="277" fill="#9CA3AF" font-family="sans-serif" font-size="11">5. E-Sertifikat QR</text>
+
+    <!-- Top KPI Row -->
+    <rect x="210" y="80" width="170" height="78" rx="10" fill="url(#cardGrad)" stroke="#1E3A31"/>
+    <text x="226" y="104" fill="#9CA3AF" font-family="sans-serif" font-size="11">Total Built Pages</text>
+    <text x="226" y="138" fill="#34D399" font-family="sans-serif" font-weight="700" font-size="26">160+ UI</text>
+
+    <rect x="394" y="80" width="170" height="78" rx="10" fill="url(#cardGrad)" stroke="#1E3A31"/>
+    <text x="410" y="104" fill="#9CA3AF" font-family="sans-serif" font-size="11">Learning Activities</text>
+    <text x="410" y="138" fill="#F0F6FC" font-family="sans-serif" font-weight="700" font-size="24">15 Modules</text>
+
+    <rect x="578" y="80" width="178" height="78" rx="10" fill="url(#cardGrad)" stroke="#1E3A31"/>
+    <text x="594" y="104" fill="#9CA3AF" font-family="sans-serif" font-size="11">Auto Docs &amp; Certs</text>
+    <text x="594" y="138" fill="#34D399" font-family="sans-serif" font-weight="700" font-size="22">DOCX &amp; PDF</text>
+
+    <!-- Main Course Progress Card -->
+    <rect x="210" y="172" width="354" height="238" rx="12" fill="#111D19" stroke="#1E3A31"/>
+    <text x="230" y="200" fill="#F0F6FC" font-family="sans-serif" font-weight="700" font-size="14">Active Civil Servant Training Courses</text>
+
+    <rect x="230" y="216" width="314" height="50" rx="8" fill="#162822"/>
+    <text x="246" y="236" fill="#ECFDF5" font-family="sans-serif" font-weight="600" font-size="12">Diklat Kepemimpinan &amp; Manajemen ASN</text>
+    <rect x="246" y="246" width="220" height="8" rx="4" fill="#0B1310"/>
+    <rect x="246" y="246" width="185" height="8" rx="4" fill="url(#emeraldGrad)"/>
+    <text x="480" y="254" fill="#34D399" font-family="monospace" font-size="11">84%</text>
+
+    <rect x="230" y="278" width="314" height="50" rx="8" fill="#162822"/>
+    <text x="246" y="298" fill="#ECFDF5" font-family="sans-serif" font-weight="600" font-size="12">Evaluasi Kuis &amp; Mentoring Terpadu</text>
+    <rect x="246" y="308" width="220" height="8" rx="4" fill="#0B1310"/>
+    <rect x="246" y="308" width="202" height="8" rx="4" fill="url(#emeraldGrad)"/>
+    <text x="480" y="316" fill="#34D399" font-family="monospace" font-size="11">92%</text>
+
+    <rect x="230" y="340" width="314" height="50" rx="8" fill="#162822"/>
+    <text x="246" y="360" fill="#ECFDF5" font-family="sans-serif" font-weight="600" font-size="12">Sinkronisasi SSO 5 Portal Provinsi</text>
+    <rect x="246" y="370" width="220" height="8" rx="4" fill="#0B1310"/>
+    <rect x="246" y="370" width="220" height="8" rx="4" fill="url(#emeraldGrad)"/>
+    <text x="480" y="378" fill="#34D399" font-family="monospace" font-size="11">100%</text>
+
+    <!-- Certificate & QR Preview Card -->
+    <rect x="578" y="172" width="178" height="238" rx="12" fill="url(#cardGrad)" stroke="#10B981" stroke-opacity="0.5"/>
+    <text x="667" y="202" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-weight="700" font-size="12">E-CERTIFICATE</text>
+    <text x="667" y="220" text-anchor="middle" fill="#9CA3AF" font-family="sans-serif" font-size="10">QR Verification Ready</text>
+    <!-- Simulated QR box -->
+    <rect x="627" y="236" width="80" height="80" rx="8" fill="#0B1310" stroke="#34D399" stroke-width="1.5"/>
+    <rect x="639" y="248" width="20" height="20" fill="#34D399"/>
+    <rect x="675" y="248" width="20" height="20" fill="#34D399"/>
+    <rect x="639" y="284" width="20" height="20" fill="#34D399"/>
+    <rect x="665" y="274" width="12" height="12" fill="#10B981"/>
+    <rect x="683" y="288" width="12" height="16" fill="#34D399"/>
+    <rect x="602" y="336" width="130" height="26" rx="13" fill="#10B981"/>
+    <text x="667" y="353" text-anchor="middle" fill="#07130F" font-family="sans-serif" font-weight="700" font-size="11">Download PDF</text>
+    <text x="667" y="384" text-anchor="middle" fill="#9CA3AF" font-family="monospace" font-size="10">Laravel 10 · Vue 3</text>
+    
+</svg>

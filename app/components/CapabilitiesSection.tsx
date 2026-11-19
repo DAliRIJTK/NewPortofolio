@@ -1,18 +1,25 @@
-import { CAPABILITY_DOMAINS } from "../data/portfolio";
+"use client";
+
+import { useLanguage } from "../context/LanguageContext";
+import { CAPABILITY_DOMAINS_BY_LANG, UI_TEXT } from "../data/portfolio";
 import { SectionTitle } from "./SectionTitle";
 import { TechLogo } from "./TechLogo";
 
 export function CapabilitiesSection() {
+  const { lang } = useLanguage();
+  const domains = CAPABILITY_DOMAINS_BY_LANG[lang];
+  const t = UI_TEXT[lang].skills;
+
   return (
     <section
       id="capabilities"
       aria-labelledby="capabilities-heading"
       className="flex w-full flex-col items-center gap-12 px-5 pt-24 sm:px-8 lg:gap-20 lg:px-12 lg:pt-[144px]"
     >
-      <SectionTitle id="capabilities-heading">Skills</SectionTitle>
+      <SectionTitle id="capabilities-heading">{t.heading}</SectionTitle>
 
       <div className="grid w-full grid-cols-1 gap-6 lg:grid-cols-3">
-        {CAPABILITY_DOMAINS.map((domain) => (
+        {domains.map((domain) => (
           <div
             key={domain.id}
             className="flex flex-col gap-6 rounded-3xl border border-line bg-surface p-6 shadow-card sm:p-8"

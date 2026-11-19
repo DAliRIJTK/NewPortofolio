@@ -1,17 +1,24 @@
-import { EXPERIENCE_TIMELINE } from "../data/portfolio";
+"use client";
+
+import { useLanguage } from "../context/LanguageContext";
+import { EXPERIENCE_BY_LANG, UI_TEXT } from "../data/portfolio";
 import { SectionTitle } from "./SectionTitle";
 
 export function ExperienceSection() {
+  const { lang } = useLanguage();
+  const experiences = EXPERIENCE_BY_LANG[lang];
+  const t = UI_TEXT[lang].experience;
+
   return (
     <section
       id="experience"
       aria-labelledby="experience-heading"
       className="flex w-full flex-col items-center gap-12 px-5 pt-24 sm:px-8 lg:gap-20 lg:px-12 lg:pt-[144px]"
     >
-      <SectionTitle id="experience-heading">Experience</SectionTitle>
+      <SectionTitle id="experience-heading">{t.heading}</SectionTitle>
 
       <ol className="flex w-full flex-col gap-6">
-        {EXPERIENCE_TIMELINE.map((exp) => (
+        {experiences.map((exp) => (
           <li
             key={exp.company}
             className="flex flex-col gap-4 rounded-3xl border border-line bg-surface p-6 shadow-card sm:p-10"

@@ -1,19 +1,24 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
+import { UI_TEXT } from "../data/portfolio";
 
-const NAV_ITEMS = [
-  { id: "about", label: "About" },
-  { id: "work", label: "Projects" },
-  { id: "experience", label: "Experience" },
-  { id: "capabilities", label: "Skills" },
-  { id: "credentials", label: "Certifications" },
-  { id: "contact", label: "Contacts" },
-];
+const NAV_IDS = [
+  "about",
+  "work",
+  "experience",
+  "capabilities",
+  "credentials",
+  "contact",
+] as const;
 
 export function Navbar() {
+  const { lang, setLang } = useLanguage();
   const [activeId, setActiveId] = useState<string>("");
   const [scrolled, setScrolled] = useState(false);
+
+  const t = UI_TEXT[lang].nav;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,11 +33,11 @@ export function Navbar() {
       }
 
       let current = "";
-      for (const item of NAV_ITEMS) {
-        const el = document.getElementById(item.id);
+      for (const id of NAV_IDS) {
+        const el = document.getElementById(id);
         if (!el) continue;
         if (el.getBoundingClientRect().top <= 180) {
-          current = item.id;
+          current = id;
         }
       }
       setActiveId(current);
@@ -55,18 +60,20 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="flex h-14 w-full items-center justify-center px-5 sm:px-8 lg:px-12">
+      <div className="flex h-14 w-full items-center justify-between gap-4 px-5 sm:px-8 lg:px-12">
+        <div className="hidden w-20 lg:block" aria-hidden="true" />
+
         <nav
           aria-label="Primary"
-          className="no-scrollbar flex max-w-full items-center gap-6 overflow-x-auto lg:gap-12"
+          className="no-scrollbar flex max-w-full items-center gap-5 overflow-x-auto sm:gap-6 lg:gap-12"
         >
-          {NAV_ITEMS.map((item) => {
-            const isActive = activeId === item.id;
+          {NAV_IDS.map((id) => {
+            const isActive = activeId === id;
             return (
               <a
-                key={item.id}
-                href={`#${item.id}`}
-                onClick={() => setActiveId(item.id)}
+                key={id}
+                href={`#${id}`}
+                onClick={() => setActiveId(id)}
                 aria-current={isActive ? "location" : undefined}
                 className={`group flex shrink-0 flex-col gap-0.5 font-nav text-sm sm:text-[18px] leading-7 transition-colors ${
                   isActive
@@ -74,7 +81,7 @@ export function Navbar() {
                     : "font-medium text-ink/80 hover:text-ink"
                 }`}
               >
-                {item.label}
+                {t[id]}
                 <span
                   className={`h-[3px] rounded-[2px] transition-all duration-200 ${
                     isActive
@@ -86,6 +93,38 @@ export function Navbar() {
             );
           })}
         </nav>
+
+        {/* Language Toggle (EN / ID) */}
+        <div
+          role="group"
+          aria-label="Language switcher"
+          className="flex shrink-0 items-center rounded-full border border-line bg-surface/90 p-0.5 text-xs font-semibold shadow-sm"
+        >
+          <button
+            type="button"
+            onClick={() => setLang("en")}
+            aria-pressed={lang === "en"}
+            className={`rounded-full px-2.5 py-1 transition-colors ${
+              lang === "en"
+                ? "bg-brand text-page font-bold"
+                : "text-muted hover:text-ink"
+            }`}
+          >
+            EN
+          </button>
+          <button
+            type="button"
+            onClick={() => setLang("id")}
+            aria-pressed={lang === "id"}
+            className={`rounded-full px-2.5 py-1 transition-colors ${
+              lang === "id"
+                ? "bg-brand text-page font-bold"
+                : "text-muted hover:text-ink"
+            }`}
+          >
+            ID
+          </button>
+        </div>
       </div>
     </header>
   );

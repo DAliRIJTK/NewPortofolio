@@ -1,17 +1,24 @@
-import { CERTIFICATIONS } from "../data/portfolio";
+"use client";
+
+import { useLanguage } from "../context/LanguageContext";
+import { CERTIFICATIONS_BY_LANG, UI_TEXT } from "../data/portfolio";
 import { SectionTitle } from "./SectionTitle";
 
 export function CredentialsSection() {
+  const { lang } = useLanguage();
+  const certifications = CERTIFICATIONS_BY_LANG[lang];
+  const t = UI_TEXT[lang].certifications;
+
   return (
     <section
       id="credentials"
       aria-labelledby="credentials-heading"
       className="flex w-full flex-col items-center gap-12 px-5 pt-24 sm:px-8 lg:gap-20 lg:px-12 lg:pt-[144px]"
     >
-      <SectionTitle id="credentials-heading">Certifications</SectionTitle>
+      <SectionTitle id="credentials-heading">{t.heading}</SectionTitle>
 
       <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
-        {CERTIFICATIONS.map((cert) => (
+        {certifications.map((cert) => (
           <div
             key={cert.id}
             className="flex flex-col items-start gap-4 rounded-3xl border border-line bg-surface p-6 shadow-card sm:p-8"
@@ -32,7 +39,7 @@ export function CredentialsSection() {
               rel="noopener noreferrer"
               className="mt-auto rounded-3xl border border-brand px-6 py-2 font-button text-base font-medium leading-[1.5] text-brand-neon transition-colors hover:bg-brand hover:text-page"
             >
-              View PDF
+              {t.viewPdf}
             </a>
           </div>
         ))}

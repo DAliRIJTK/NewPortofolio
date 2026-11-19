@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
-import { PERSONAL_DATA } from "../data/portfolio";
+import { useLanguage } from "../context/LanguageContext";
+import { PERSONAL_DATA, UI_TEXT } from "../data/portfolio";
 import { SectionTitle } from "./SectionTitle";
 
 const ICONS: Record<string, { src: string; width: number; height: number }> = {
@@ -30,6 +33,9 @@ const GMAIL_DIRECT_URL = `https://mail.google.com/mail/?view=cm&fs=1&to=${encode
 )}`;
 
 export function ContactFooter() {
+  const { lang } = useLanguage();
+  const t = UI_TEXT[lang].contact;
+
   return (
     <footer
       id="contact"
@@ -38,13 +44,9 @@ export function ContactFooter() {
     >
       <div className="flex w-full flex-col items-center gap-8 rounded-3xl border border-line bg-surface p-8 shadow-card sm:p-12 lg:p-14">
         <div className="flex flex-col items-center gap-4 text-center">
-          <SectionTitle id="contact-heading">
-            Let&apos;s Get in Contact
-          </SectionTitle>
+          <SectionTitle id="contact-heading">{t.heading}</SectionTitle>
           <p className="max-w-[56ch] text-base sm:text-lg leading-[1.6] text-muted">
-            Have a web or mobile project in mind, or looking for a developer to
-            join your team? Send me a message or reach out through any of the
-            channels below.
+            {t.subtitle}
           </p>
         </div>
 
@@ -67,7 +69,7 @@ export function ContactFooter() {
             <rect width="20" height="16" x="2" y="4" rx="2" />
             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
           </svg>
-          Message via Gmail
+          {t.gmailCta}
         </a>
 
         <ul className="grid w-full grid-cols-1 gap-4 md:grid-cols-3">

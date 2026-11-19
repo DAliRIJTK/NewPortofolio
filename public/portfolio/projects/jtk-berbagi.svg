@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0B1310"/>
+      <stop offset="50%" stop-color="#0F221C"/>
+      <stop offset="100%" stop-color="#131920"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="400" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#162822"/>
+      <stop offset="100%" stop-color="#111A1D"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#34D399" stroke-width="0.6" stroke-opacity="0.07"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+  <rect width="800" height="450" fill="url(#grid)"/>
+  <circle cx="700" cy="70" r="180" fill="#10B981" fill-opacity="0.08"/>
+  <circle cx="100" cy="390" r="160" fill="#34D399" fill-opacity="0.06"/>
+
+  <!-- Outer Browser / App Frame -->
+  <rect x="28" y="24" width="744" height="402" rx="16" fill="#0D1513" stroke="#1E3A31" stroke-width="1.5"/>
+  <!-- Top Window Bar -->
+  <path d="M28 40C28 31.1634 35.1634 24 44 24H756C764.837 24 772 31.1634 772 40V64H28V40Z" fill="#12211C"/>
+  <line x1="28" y1="64" x2="772" y2="64" stroke="#1E3A31" stroke-width="1.5"/>
+  <circle cx="50" cy="44" r="5.5" fill="#EF4444" fill-opacity="0.8"/>
+  <circle cx="68" cy="44" r="5.5" fill="#F59E0B" fill-opacity="0.8"/>
+  <circle cx="86" cy="44" r="5.5" fill="#10B981" fill-opacity="0.8"/>
+
+  <!-- URL / Header Pill -->
+  <rect x="114" y="33" width="440" height="22" rx="6" fill="#0A1210" stroke="#1E3A31" stroke-width="1"/>
+  <text x="128" y="48" fill="#8B949E" font-family="monospace" font-size="11">https://jtkberbagi.polban.ac.id/beasiswa-dan-donasi</text>
+
+  <!-- Project Badge -->
+  <rect x="576" y="33" width="176" height="22" rx="11" fill="#064E3B" stroke="#10B981" stroke-width="1"/>
+  <text x="664" y="48" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-weight="700" font-size="10.5">SCHOLARSHIP & DONATION</text>
+
+  
+    <!-- Left Card: UKT Scholarship Financial Aid -->
+    <rect x="44" y="80" width="346" height="330" rx="12" fill="#111D19" stroke="#1E3A31"/>
+    <text x="66" y="108" fill="#34D399" font-family="sans-serif" font-weight="700" font-size="13">BANTUAN DANA BEASISWA UKT</text>
+    <text x="66" y="128" fill="#9CA3AF" font-family="sans-serif" font-size="11">Seleksi Esai, Kehadiran &amp; Golongan UKT Mahasiswa</text>
+
+    <rect x="66" y="146" width="302" height="68" rx="8" fill="#162822" stroke="#10B981" stroke-opacity="0.4"/>
+    <text x="82" y="168" fill="#ECFDF5" font-family="sans-serif" font-weight="600" font-size="12">Pengajuan Beasiswa Semester Genap</text>
+    <text x="82" y="188" fill="#34D399" font-family="monospace" font-size="10.5">Esai Score: 92/100 · Kehadiran: Verified</text>
+    <rect x="82" y="198" width="94" height="8" rx="4" fill="#10B981"/>
+
+    <rect x="66" y="226" width="302" height="68" rx="8" fill="#162822"/>
+    <text x="82" y="248" fill="#ECFDF5" font-family="sans-serif" font-weight="600" font-size="12">Penyaluran Dana Bertahap (Multi-Stage)</text>
+    <text x="82" y="268" fill="#9CA3AF" font-family="monospace" font-size="10.5">Laporan PDF (jsPDF) &amp; Import Excel (Roo)</text>
+
+    <rect x="66" y="308" width="144" height="36" rx="8" fill="#064E3B"/>
+    <text x="138" y="330" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-weight="700" font-size="11">React 18 + MUI</text>
+    <rect x="224" y="308" width="144" height="36" rx="8" fill="#064E3B"/>
+    <text x="296" y="330" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-weight="700" font-size="11">Ruby on Rails API</text>
+
+    <!-- Right Card: Non-Scholarship Crowdfunding & Midtrans -->
+    <rect x="406" y="80" width="350" height="330" rx="12" fill="url(#cardGrad)" stroke="#1E3A31"/>
+    <text x="428" y="108" fill="#F0F6FC" font-family="sans-serif" font-weight="700" font-size="13">PENGGALANGAN DANA &amp; DONASI</text>
+
+    <rect x="428" y="128" width="306" height="118" rx="10" fill="#111D19" stroke="#1E3A31"/>
+    <text x="446" y="154" fill="#ECFDF5" font-family="sans-serif" font-weight="700" font-size="13">Bantuan Medis &amp; Darurat Civitas JTK</text>
+    <text x="446" y="178" fill="#34D399" font-family="sans-serif" font-weight="700" font-size="20">Rp 18.750.000</text>
+    <text x="610" y="178" fill="#9CA3AF" font-family="sans-serif" font-size="11">dari Rp 20.000.000</text>
+    <rect x="446" y="196" width="270" height="10" rx="5" fill="#0B1310"/>
+    <rect x="446" y="196" width="250" height="10" rx="5" fill="url(#emeraldGrad)"/>
+    <text x="446" y="228" fill="#A7F3D0" font-family="monospace" font-size="10.5">93.7% Terkumpul · 142 Donatur</text>
+
+    <!-- Midtrans & Twilio Integration Box -->
+    <rect x="428" y="260" width="306" height="84" rx="10" fill="#111D19" stroke="#10B981" stroke-opacity="0.5"/>
+    <text x="446" y="286" fill="#34D399" font-family="sans-serif" font-weight="700" font-size="12">MIDTRANS PAYMENT GATEWAY &amp; JWT</text>
+    <text x="446" y="308" fill="#ECFDF5" font-family="sans-serif" font-size="11">Verifikasi Donasi Otomatis + Sertifikat Donatur</text>
+    <text x="446" y="328" fill="#9CA3AF" font-family="monospace" font-size="10.5">Swagger OpenAPI Docs · Twilio SMS/WA</text>
+    
+</svg>

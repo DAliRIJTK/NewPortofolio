@@ -1,9 +1,15 @@
-import Image from "next/image";
-import { PERSONAL_DATA } from "../data/portfolio";
+"use client";
 
-const linkedIn = PERSONAL_DATA.socials.find((s) => s.label === "LinkedIn");
+import Image from "next/image";
+import { useLanguage } from "../context/LanguageContext";
+import { PERSONAL_DATA_BY_LANG, UI_TEXT } from "../data/portfolio";
 
 export function ProfileSection() {
+  const { lang } = useLanguage();
+  const person = PERSONAL_DATA_BY_LANG[lang];
+  const t = UI_TEXT[lang].hero;
+  const linkedIn = person.socials.find((s) => s.label === "LinkedIn");
+
   return (
     <section
       id="top"
@@ -45,8 +51,8 @@ export function ProfileSection() {
 
         <div className="absolute left-1/2 top-[96px] size-[280px] -translate-x-1/2 overflow-hidden rounded-full border-8 border-[#161B22] bg-[#0F2922] shadow-card ring-2 ring-brand-neon/50 lg:left-[190px] lg:top-[88px] lg:size-[400px] lg:translate-x-0">
           <Image
-            src={PERSONAL_DATA.avatarUrl}
-            alt={PERSONAL_DATA.fullName}
+            src={person.avatarUrl}
+            alt={person.fullName}
             fill
             sizes="(min-width: 1024px) 400px, 280px"
             className="object-cover object-[50%_20%]"
@@ -58,7 +64,7 @@ export function ProfileSection() {
       <div className="px-5 pb-16 pt-10 sm:px-8 lg:px-12 lg:pb-0 lg:pt-[110px]">
         <div className="flex flex-col gap-3 lg:max-w-[calc(100%-700px)]">
           <p className="text-[20px] font-bold text-brand-neon">
-            {PERSONAL_DATA.heroLabel}
+            {person.heroLabel}
           </p>
 
           <div className="flex flex-col gap-8">
@@ -66,11 +72,11 @@ export function ProfileSection() {
               id="profile-heading"
               className="font-display text-[40px] sm:text-[52px] lg:text-[56px] font-bold leading-[1.2] text-ink"
             >
-              Hello, my name is {PERSONAL_DATA.fullName}
+              {t.greetingPrefix} {person.fullName}
             </h1>
 
             <p className="max-w-[60ch] text-lg lg:text-2xl leading-[1.5] text-muted">
-              {PERSONAL_DATA.heroIntro}
+              {person.heroIntro}
             </p>
 
             <div className="flex flex-wrap gap-3">
@@ -78,7 +84,7 @@ export function ProfileSection() {
                 href="#work"
                 className="rounded-lg bg-brand px-6 py-2 font-button text-[18px] font-medium leading-[1.5] text-page shadow-sm shadow-brand/25 transition-colors hover:bg-brand-neon"
               >
-                Projects
+                {t.projectsCta}
               </a>
               {linkedIn && (
                 <a
