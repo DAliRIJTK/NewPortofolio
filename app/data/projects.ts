@@ -13,9 +13,8 @@ export interface ProjectCaseStudy {
   role: string;
   summary: string;
   stack: string[];
-  link: string;
+  link?: string;
   links?: ProjectLink[];
-  docPdfUrl?: string;
   imageUrl?: string;
   imageAlt?: string;
   outcomes: string[];
@@ -36,9 +35,7 @@ export const FEATURED_PROJECTS: ProjectCaseStudy[] = [
       "Tailwind CSS",
       "MySQL & MongoDB",
     ],
-    link: "https://github.com/DAliRIJTK",
-    docPdfUrl: "/portfolio/ElearningBSP_Portfolio_Documentation.pdf",
-    imageUrl: "/portfolio/projects/elearning-bsp.svg",
+    imageUrl: "/portfolio/projects/elearning-bsp.png",
     outcomes: [
       "Built over 160 web pages covering online classes, quizzes, study materials, and mentoring programs for civil servants.",
       "Added automatic creation for official Word documents and downloadable PDF certificates with QR codes for verification.",
@@ -58,8 +55,7 @@ export const FEATURED_PROJECTS: ProjectCaseStudy[] = [
       "Oracle DB",
       "MySQL",
     ],
-    link: "https://github.com/DAliRIJTK",
-    imageUrl: "/portfolio/projects/geoapps.svg",
+    imageUrl: "/portfolio/projects/GeoApps.png",
     outcomes: [
       "Built web pages and data forms so field and office teams can record exploration results, drilling progress, and equipment activity accurately.",
       "Worked with the team at PT Bima Inspira Solusindo to deliver features for daily operational workflow.",
@@ -78,9 +74,7 @@ export const FEATURED_PROJECTS: ProjectCaseStudy[] = [
       "Vue 3",
       "MySQL",
     ],
-    link: "https://github.com/DAliRIJTK",
-    docPdfUrl: "/portfolio/Investasi_Portfolio_Documentation.pdf",
-    imageUrl: "/portfolio/projects/investasi-indonesiare.svg",
+    imageUrl: "/portfolio/projects/investasi-indonesiare.png",
     outcomes: [
       "Created over 26 automated financial reports in PDF and Excel formats covering deposits, bonds, mutual funds, stocks, and government securities.",
       "Added live calculators to compare actual investment returns against annual targets and track currency exchange impacts.",
@@ -103,7 +97,7 @@ export const FEATURED_PROJECTS: ProjectCaseStudy[] = [
       "Docker",
     ],
     link: "https://github.com/DAliRIJTK/cms-kadoceria",
-    imageUrl: "/portfolio/projects/cms-kadoceria.svg",
+    imageUrl: "/portfolio/projects/cms-kadoceria.png",
     outcomes: [
       "Built an automated PDF-to-WebP page conversion pipeline that turns uploaded storybooks into optimized digital pages.",
       "Developed a bilingual content editor supporting Indonesian and Sundanese metadata, per-page audio narration, background music library, and coordinate-based interactive audio hotspots.",
@@ -126,7 +120,7 @@ export const FEATURED_PROJECTS: ProjectCaseStudy[] = [
       "Docker",
     ],
     link: "https://github.com/basganajaah/sikahim-apps",
-    imageUrl: "/portfolio/projects/sikahim-apps.svg",
+    imageUrl: "/portfolio/projects/sikahim-apps.png",
     outcomes: [
       "Built dual-portal workflows allowing administrators to manage events, categories, quotas, study materials, and schedules while congregation members browse verified agendas and register online.",
       "Implemented interactive calendar-based event creation with automated validation for schedule conflicts, participant quotas, verification status, and duplicate registrations.",
@@ -147,7 +141,6 @@ export const FEATURED_PROJECTS: ProjectCaseStudy[] = [
       "MySQL",
       "Midtrans",
     ],
-    link: "https://github.com/RaditZX/JTKBerbagi-Client",
     links: [
       {
         label: "GitHub (Client)",
@@ -158,7 +151,7 @@ export const FEATURED_PROJECTS: ProjectCaseStudy[] = [
         url: "https://github.com/RaditZX/JTKBerbagi-Service",
       },
     ],
-    imageUrl: "/portfolio/projects/jtk-berbagi.svg",
+    imageUrl: "/portfolio/projects/jtk-berbagi.png",
     outcomes: [
       "Built a React and Material UI web client featuring separate donor/applicant and administrator portals with PDF report export (jsPDF) and document uploads.",
       "Developed a Ruby on Rails RESTful API service backed by MySQL to handle scholarship screening, essay evaluation, attendance verification, and multi-stage fund disbursement.",
@@ -179,7 +172,6 @@ export const FEATURED_PROJECTS: ProjectCaseStudy[] = [
       "Node.js",
       "Express.js",
     ],
-    link: "https://github.com/RaditZX/SnapCash",
     links: [
       {
         label: "GitHub (Mobile App)",
@@ -190,8 +182,7 @@ export const FEATURED_PROJECTS: ProjectCaseStudy[] = [
         url: "https://github.com/RaditZX/SnapCash-Service",
       },
     ],
-    docPdfUrl: "/portfolio/SnapCash_Portfolio_Documentation.pdf",
-    imageUrl: "/portfolio/projects/snapcash-mobile.svg",
+    imageUrl: "/portfolio/projects/snapcash-mobile.jpg",
     outcomes: [
       "Designed and built 13 app screens, including a built-in camera scanner that turns receipt details into expense entries.",
       "Developed the companion Express.js and Firebase REST backend supporting image upload processing (Multer/Sharp), email notifications (Nodemailer), and receipt extraction.",
@@ -212,7 +203,7 @@ export const FEATURED_PROJECTS: ProjectCaseStudy[] = [
       "Jupyter Notebook",
     ],
     link: "https://github.com/Ahmdhsy/tubespcd",
-    imageUrl: "/portfolio/projects/yolo-meal-app.svg",
+    imageUrl: "/portfolio/projects/yolo-meal-app.png",
     outcomes: [
       "Trained and integrated a YOLOv8n object detection model on a custom food dataset to recognize dishes from user-uploaded photos.",
       "Connected detection outputs to TheMealDB REST API to automatically retrieve and display ingredients and step-by-step cooking instructions.",
@@ -232,7 +223,7 @@ export const FEATURED_PROJECTS: ProjectCaseStudy[] = [
       "Haar Cascade & MTCNN",
     ],
     link: "https://github.com/Ahmdhsy/pra_tubes_pcd",
-    imageUrl: "/portfolio/projects/lookalike-pcd.svg",
+    imageUrl: "/portfolio/projects/lookalike-pcd.png",
     outcomes: [
       "Developed real-time webcam and image-upload pipelines for face detection using Haar Cascade and MTCNN detectors.",
       "Implemented facial feature embedding extraction to compute similarity scores between pairs of faces.",
@@ -254,7 +245,7 @@ export const FEATURED_PROJECTS: ProjectCaseStudy[] = [
       "File I/O",
     ],
     link: "https://github.com/hanifmdn/Binary-Search-Tree-for-Hospital-Queue",
-    imageUrl: "/portfolio/projects/bst-hospital-queue.svg",
+    imageUrl: "/portfolio/projects/hospital-queue.png",
     outcomes: [
       "Implemented a custom Binary Search Tree with node insertion, deletion, preorder traversal, and hierarchical tree visualization for patient queues.",
       "Built automated queue sorting based on medical priority levels and registration timestamps, backed by daily persistent text file storage.",
@@ -276,7 +267,7 @@ export const FEATURED_PROJECTS: ProjectCaseStudy[] = [
       "PVD Steganography",
     ],
     link: "https://github.com/dirarmdn/OneSecure",
-    imageUrl: "/portfolio/projects/onesecure.svg",
+    imageUrl: "/portfolio/projects/onesecure.png",
     outcomes: [
       "Implemented core AES encryption and decryption transformations in C/C++, including SubBytes, ShiftRows, MixColumns, AddRoundKey, and key expansion routines.",
       "Built Pixel Value Differencing (PVD) steganography modules to embed encrypted text payloads inside PNG images and extract hidden messages without noticeable visual distortion.",
@@ -299,9 +290,7 @@ export const FEATURED_PROJECTS_ID: ProjectCaseStudy[] = [
       "Tailwind CSS",
       "MySQL & MongoDB",
     ],
-    link: "https://github.com/DAliRIJTK",
-    docPdfUrl: "/portfolio/ElearningBSP_Portfolio_Documentation.pdf",
-    imageUrl: "/portfolio/projects/elearning-bsp.svg",
+    imageUrl: "/portfolio/projects/elearning-bsp.png",
     outcomes: [
       "Membangun lebih dari 160 halaman web yang mencakup kelas daring, kuis, materi belajar, dan program pendampingan (mentoring) bagi ASN.",
       "Menambahkan fitur pembuatan otomatis dokumen resmi Word serta sertifikat PDF yang dilengkapi kode QR untuk verifikasi keaslian.",
@@ -321,8 +310,7 @@ export const FEATURED_PROJECTS_ID: ProjectCaseStudy[] = [
       "Oracle DB",
       "MySQL",
     ],
-    link: "https://github.com/DAliRIJTK",
-    imageUrl: "/portfolio/projects/geoapps.svg",
+    imageUrl: "/portfolio/projects/GeoApps.png",
     outcomes: [
       "Membangun halaman web dan formulir input data agar tim lapangan maupun kantor dapat mencatat hasil eksplorasi, progres pengeboran, dan aktivitas alat secara akurat.",
       "Berkolaborasi bersama tim PT Bima Inspira Solusindo untuk menyelesaikan fitur-fitur pendukung alur kerja operasional harian.",
@@ -341,9 +329,7 @@ export const FEATURED_PROJECTS_ID: ProjectCaseStudy[] = [
       "Vue 3",
       "MySQL",
     ],
-    link: "https://github.com/DAliRIJTK",
-    docPdfUrl: "/portfolio/Investasi_Portfolio_Documentation.pdf",
-    imageUrl: "/portfolio/projects/investasi-indonesiare.svg",
+    imageUrl: "/portfolio/projects/investasi-indonesiare.png",
     outcomes: [
       "Membuat lebih dari 26 laporan keuangan otomatis dalam format PDF dan Excel yang mencakup deposito, obligasi, reksa dana, saham, dan surat berharga negara.",
       "Menambahkan kalkulator langsung untuk membandingkan realisasi imbal hasil investasi terhadap target tahunan serta memantau dampak selisih kurs mata uang.",
@@ -366,7 +352,7 @@ export const FEATURED_PROJECTS_ID: ProjectCaseStudy[] = [
       "Docker",
     ],
     link: "https://github.com/DAliRIJTK/cms-kadoceria",
-    imageUrl: "/portfolio/projects/cms-kadoceria.svg",
+    imageUrl: "/portfolio/projects/cms-kadoceria.png",
     outcomes: [
       "Membangun alur konversi otomatis file PDF menjadi halaman gambar berformat WebP yang teroptimasi untuk perangkat digital.",
       "Mengembangkan editor konten dwibahasa yang mendukung metadata Indonesia & Sunda, narasi audio per halaman, pustaka musik latar, dan hotspot audio interaktif berbasis koordinat.",
@@ -389,7 +375,7 @@ export const FEATURED_PROJECTS_ID: ProjectCaseStudy[] = [
       "Docker",
     ],
     link: "https://github.com/basganajaah/sikahim-apps",
-    imageUrl: "/portfolio/projects/sikahim-apps.svg",
+    imageUrl: "/portfolio/projects/sikahim-apps.png",
     outcomes: [
       "Membangun alur kerja dua portal yang memudahkan pengurus mengelola kegiatan, kategori, kuota, materi kajian, dan jadwal sementara jamaah dapat melihat agenda terverifikasi serta mendaftar secara daring.",
       "Mengimplementasikan pembuatan kegiatan langsung dari kalender interaktif dengan validasi otomatis terhadap bentrok jadwal, kuota peserta, status verifikasi, dan pendaftaran ganda.",
@@ -410,7 +396,6 @@ export const FEATURED_PROJECTS_ID: ProjectCaseStudy[] = [
       "MySQL",
       "Midtrans",
     ],
-    link: "https://github.com/RaditZX/JTKBerbagi-Client",
     links: [
       {
         label: "GitHub (Client)",
@@ -421,7 +406,7 @@ export const FEATURED_PROJECTS_ID: ProjectCaseStudy[] = [
         url: "https://github.com/RaditZX/JTKBerbagi-Service",
       },
     ],
-    imageUrl: "/portfolio/projects/jtk-berbagi.svg",
+    imageUrl: "/portfolio/projects/jtk-berbagi.png",
     outcomes: [
       "Membangun aplikasi web client menggunakan React dan Material UI dengan pemisahan portal donatur/pendaftar dan administrator, dilengkapi ekspor laporan PDF (jsPDF) dan unggah dokumen.",
       "Mengembangkan layanan RESTful API Ruby on Rails berbasis MySQL untuk menangani seleksi beasiswa, penilaian esai, verifikasi kehadiran perkuliahan, dan penyaluran dana bertahap.",
@@ -442,7 +427,6 @@ export const FEATURED_PROJECTS_ID: ProjectCaseStudy[] = [
       "Node.js",
       "Express.js",
     ],
-    link: "https://github.com/RaditZX/SnapCash",
     links: [
       {
         label: "GitHub (Mobile App)",
@@ -453,8 +437,7 @@ export const FEATURED_PROJECTS_ID: ProjectCaseStudy[] = [
         url: "https://github.com/RaditZX/SnapCash-Service",
       },
     ],
-    docPdfUrl: "/portfolio/SnapCash_Portfolio_Documentation.pdf",
-    imageUrl: "/portfolio/projects/snapcash-mobile.svg",
+    imageUrl: "/portfolio/projects/snapcash-mobile.jpg",
     outcomes: [
       "Merancang dan membangun 13 layar aplikasi menggunakan Jetpack Compose, termasuk pemindai kamera terintegrasi yang mengubah rincian struk menjadi catatan pengeluaran.",
       "Mengembangkan layanan REST backend pendamping dengan Express.js dan Firebase yang mendukung pemrosesan unggahan gambar (Multer/Sharp), notifikasi email (Nodemailer), dan ekstraksi struk.",
@@ -475,7 +458,7 @@ export const FEATURED_PROJECTS_ID: ProjectCaseStudy[] = [
       "Jupyter Notebook",
     ],
     link: "https://github.com/Ahmdhsy/tubespcd",
-    imageUrl: "/portfolio/projects/yolo-meal-app.svg",
+    imageUrl: "/portfolio/projects/yolo-meal-app.png",
     outcomes: [
       "Melatih dan mengintegrasikan model deteksi objek YOLOv8n pada dataset makanan khusus untuk mengenali hidangan dari foto unggahan pengguna.",
       "Menghubungkan hasil deteksi objek ke REST API TheMealDB untuk mengambil dan menampilkan daftar bahan beserta langkah memasak secara otomatis.",
@@ -495,7 +478,7 @@ export const FEATURED_PROJECTS_ID: ProjectCaseStudy[] = [
       "Haar Cascade & MTCNN",
     ],
     link: "https://github.com/Ahmdhsy/pra_tubes_pcd",
-    imageUrl: "/portfolio/projects/lookalike-pcd.svg",
+    imageUrl: "/portfolio/projects/lookalike-pcd.png",
     outcomes: [
       "Mengembangkan alur deteksi wajah real-time melalui webcam maupun unggahan gambar menggunakan metode Haar Cascade dan MTCNN.",
       "Mengimplementasikan ekstraksi fitur wajah (facial embeddings) untuk menghitung persentase skor kemiripan antara dua wajah.",
@@ -517,7 +500,7 @@ export const FEATURED_PROJECTS_ID: ProjectCaseStudy[] = [
       "File I/O",
     ],
     link: "https://github.com/hanifmdn/Binary-Search-Tree-for-Hospital-Queue",
-    imageUrl: "/portfolio/projects/bst-hospital-queue.svg",
+    imageUrl: "/portfolio/projects/hospital-queue.png",
     outcomes: [
       "Mengimplementasikan struktur data Binary Search Tree kustom dengan operasi penambahan node, penghapusan, penelusuran preorder, serta visualisasi hierarki tree untuk antrean pasien.",
       "Membangun pengurutan antrean otomatis berdasarkan tingkat prioritas medis dan waktu pendaftaran yang tersimpan secara persisten pada file teks harian.",
@@ -539,7 +522,7 @@ export const FEATURED_PROJECTS_ID: ProjectCaseStudy[] = [
       "PVD Steganography",
     ],
     link: "https://github.com/dirarmdn/OneSecure",
-    imageUrl: "/portfolio/projects/onesecure.svg",
+    imageUrl: "/portfolio/projects/onesecure.png",
     outcomes: [
       "Mengimplementasikan transformasi inti enkripsi dan dekripsi AES dalam C/C++, mencakup SubBytes, ShiftRows, MixColumns, AddRoundKey, serta ekspansi kunci.",
       "Membangun modul steganografi Pixel Value Differencing (PVD) untuk menyisipkan pesan terenkripsi ke dalam citra PNG dan mengekstrak kembali pesan rahasia tanpa distorsi visual.",

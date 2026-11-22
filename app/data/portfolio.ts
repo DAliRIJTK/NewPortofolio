@@ -182,7 +182,9 @@ export const UI_TEXT = {
     },
     projects: {
       heading: "Projects",
-      viewProject: "View Project",
+      viewMore: "View More Projects",
+      showLess: "Show Less",
+      moreLabel: "more",
     },
     experience: {
       heading: "Experience",
@@ -226,7 +228,9 @@ export const UI_TEXT = {
     },
     projects: {
       heading: "Proyek",
-      viewProject: "Lihat Dokumentasi",
+      viewMore: "Lihat Proyek Lainnya",
+      showLess: "Tampilkan Lebih Sedikit",
+      moreLabel: "lainnya",
     },
     experience: {
       heading: "Pengalaman",
